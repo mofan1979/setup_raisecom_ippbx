@@ -16,7 +16,7 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://172.16.58.192')
+WebUI.navigateToUrl('http://172.11.1.1')
 
 WebUI.setText(findTestObject('Page_Login/input_ _iptUsername'), 'admin')
 
