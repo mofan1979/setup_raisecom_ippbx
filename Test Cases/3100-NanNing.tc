@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>3100-NanNing</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>49ff94a3-7dab-4d29-9a02-f548b53891e3</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>4beb102c-5ade-487e-9827-e7750a6a0354</id>
+      <masked>false</masked>
+      <name>variable</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>54949a09-2126-41e2-ab52-ea92b6fdcb23</id>
+      <masked>false</masked>
+      <name>variable_0</name>
+   </variable>
+</TestCaseEntity>
