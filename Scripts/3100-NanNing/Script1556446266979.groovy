@@ -20,8 +20,6 @@ WebUI.navigateToUrl('http://172.11.1.1')
 
 WebUI.setText(findTestObject('Page_Login/input_ _iptUsername'), 'admin')
 
-not_run: WebUI.setEncryptedText(findTestObject('Page_Login/input_ _iptPassword'), 'RAIVpflpDOg=')
-
 WebUI.setText(findTestObject('Page_Login/input_ _iptPassword'), 'admin')
 
 WebUI.click(findTestObject('Page_Login/input_ _btnLogin'), FailureHandling.STOP_ON_FAILURE)
@@ -38,11 +36,11 @@ WebUI.click(findTestObject('Page_/static_ip/Page_/static_ip'))
 
 WebUI.click(findTestObject('Page_/config_SBC/input__aucPrimarySBC'))
 
-WebUI.setText(findTestObject('Page_/config_SBC/input__aucPrimarySBC'), '111.12.98.10')
+WebUI.setText(findTestObject('Page_/config_SBC/input__aucPrimarySBC'), '111.12.98.9')
 
 WebUI.click(findTestObject('Page_/config_SBC/input__aucSecondarySBC'))
 
-WebUI.setText(findTestObject('Page_/config_SBC/input__aucSecondarySBC'), '111.12.99.10')
+WebUI.setText(findTestObject('Page_/config_SBC/input__aucSecondarySBC'), '111.12.99.9')
 
 WebUI.click(findTestObject('Page_/config_SBC/apply_SBC'))
 
