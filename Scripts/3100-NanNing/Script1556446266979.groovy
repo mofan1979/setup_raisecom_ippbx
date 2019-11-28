@@ -13,10 +13,12 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://172.11.1.1')
+WebUI.navigateToUrl('http://172.16.80.133')
 
 WebUI.setText(findTestObject('Page_Login/input_ _iptUsername'), 'admin')
 
@@ -56,9 +58,23 @@ WebUI.click(findTestObject('Page_/config_IMSServer/Page_/apply_IMSserver'))
 
 WebUI.click(findTestObject('Page_/config_IMSServer/confirmIMS/Page_/button_confirmIMSSrv'))
 
+WebUI.click(findTestObject('Page_regFlowCtrl/span_SIP'))
+
+WebUI.click(findTestObject('Page_regFlowCtrl/input__ulFlowctlNum'))
+
+WebUI.setText(findTestObject('Page_regFlowCtrl/input__ulFlowctlNum'), '10')
+
+WebUI.click(findTestObject('Page_regFlowCtrl/button_applySIPproxyconf'))
+
+WebUI.delay(1)
+
+WebUI.click(findTestObject('Page_FlowCtrlConfirm/button_confirm'))
+
+WebUI.delay(1)
+
 WebUI.click(findTestObject('Page_/Page_/config_trunk'))
 
-WebUI.click(findTestObject('Page_/Page_/span_SIP'))
+WebUI.click(findTestObject('Page_/Page_/span_SIPtrunk'))
 
 WebUI.click(findTestObject('Page_/Page_/button_addTrunk'))
 
@@ -70,13 +86,15 @@ WebUI.setText(findTestObject('Page_/Page_/input__aucOfiiceUrl'), 'ims.gx.chinamo
 
 WebUI.click(findTestObject('Page_/Page_/button_applyNewTrunk'))
 
-WebUI.delay(2)
+WebUI.delay(1)
 
 WebUI.click(findTestObject('Page_/Page_/span_Route'))
 
 WebUI.click(findTestObject('Page_/Page_/span_office'))
 
-if (!(findTestObject('Page_/Page_/Page_/div_office1'))) {
+office1 = WebUI.waitForElementPresent(findTestObject('Page_office1/div_office1'), 1)
+
+if (!(office1)) {
     WebUI.click(findTestObject('Page_/Page_/button_addOffice'))
 
     WebUI.setText(findTestObject('Page_/Page_/input__usOfficeIds'), '1')
@@ -94,6 +112,8 @@ if (!(findTestObject('Page_/Page_/Page_/div_office1'))) {
     WebUI.click(findTestObject('Page_/Page_/div_Trunk201'))
 
     WebUI.click(findTestObject('Page_/Page_/button_applyOfficeTrunk'))
+
+    WebUI.delay(1)
 
     WebUI.click(findTestObject('Page_/Page_/span_closeOfficeTrunk'))
 }
